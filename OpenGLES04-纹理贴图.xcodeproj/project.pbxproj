@@ -13,6 +13,15 @@
 		5C49D5EE1F56CEC8001E9427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D5EC1F56CEC8001E9427 /* Main.storyboard */; };
 		5C49D5F01F56CEC8001E9427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D5EF1F56CEC8001E9427 /* Assets.xcassets */; };
 		5C49D5F31F56CEC8001E9427 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D5F11F56CEC8001E9427 /* LaunchScreen.storyboard */; };
+		5C49D5FD1F56CF17001E9427 /* GLUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C49D5FB1F56CF17001E9427 /* GLUtils.cpp */; };
+		5C49D6021F56D0B5001E9427 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C49D6011F56D0B5001E9427 /* OpenGLView.m */; };
+		5C49D6061F56D153001E9427 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D6041F56D153001E9427 /* Shader.fsh */; };
+		5C49D6071F56D153001E9427 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D6051F56D153001E9427 /* Shader.vsh */; };
+		5C49D60B1F56D30D001E9427 /* flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D6081F56D30D001E9427 /* flower.jpg */; };
+		5C49D60C1F56D30D001E9427 /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D6091F56D30D001E9427 /* pic.jpg */; };
+		5C49D60D1F56D30D001E9427 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D60A1F56D30D001E9427 /* wood.jpg */; };
+		5C49D6291F57AF0A001E9427 /* JpegUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C49D61A1F57AF0A001E9427 /* JpegUtil.c */; };
+		5C49D62F1F57AF0A001E9427 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C49D6281F57AF0A001E9427 /* libjpeg.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,22 @@
 		5C49D5EF1F56CEC8001E9427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C49D5F21F56CEC8001E9427 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C49D5F41F56CEC8001E9427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C49D5FB1F56CF17001E9427 /* GLUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLUtils.cpp; sourceTree = "<group>"; };
+		5C49D5FC1F56CF17001E9427 /* GLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLUtils.h; sourceTree = "<group>"; };
+		5C49D6001F56D0B5001E9427 /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		5C49D6011F56D0B5001E9427 /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		5C49D6041F56D153001E9427 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		5C49D6051F56D153001E9427 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		5C49D6081F56D30D001E9427 /* flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower.jpg; sourceTree = "<group>"; };
+		5C49D6091F56D30D001E9427 /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
+		5C49D60A1F56D30D001E9427 /* wood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wood.jpg; sourceTree = "<group>"; };
+		5C49D6161F57AF0A001E9427 /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jconfig.h; sourceTree = "<group>"; };
+		5C49D6171F57AF0A001E9427 /* jerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jerror.h; sourceTree = "<group>"; };
+		5C49D6181F57AF0A001E9427 /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jmorecfg.h; sourceTree = "<group>"; };
+		5C49D6191F57AF0A001E9427 /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jpeglib.h; sourceTree = "<group>"; };
+		5C49D61A1F57AF0A001E9427 /* JpegUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JpegUtil.c; sourceTree = "<group>"; };
+		5C49D61B1F57AF0A001E9427 /* JpegUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpegUtil.h; sourceTree = "<group>"; };
+		5C49D6281F57AF0A001E9427 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C49D62F1F57AF0A001E9427 /* libjpeg.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,14 +84,21 @@
 		5C49D5E21F56CEC8001E9427 /* OpenGLES04-纹理贴图 */ = {
 			isa = PBXGroup;
 			children = (
+				5C49D6031F56D153001E9427 /* Shader */,
+				5C49D5FA1F56CF17001E9427 /* Utils */,
 				5C49D5E61F56CEC8001E9427 /* AppDelegate.h */,
 				5C49D5E71F56CEC8001E9427 /* AppDelegate.m */,
 				5C49D5E91F56CEC8001E9427 /* ViewController.h */,
 				5C49D5EA1F56CEC8001E9427 /* ViewController.m */,
+				5C49D6001F56D0B5001E9427 /* OpenGLView.h */,
+				5C49D6011F56D0B5001E9427 /* OpenGLView.m */,
 				5C49D5EC1F56CEC8001E9427 /* Main.storyboard */,
 				5C49D5EF1F56CEC8001E9427 /* Assets.xcassets */,
 				5C49D5F11F56CEC8001E9427 /* LaunchScreen.storyboard */,
 				5C49D5F41F56CEC8001E9427 /* Info.plist */,
+				5C49D6081F56D30D001E9427 /* flower.jpg */,
+				5C49D6091F56D30D001E9427 /* pic.jpg */,
+				5C49D60A1F56D30D001E9427 /* wood.jpg */,
 				5C49D5E31F56CEC8001E9427 /* Supporting Files */,
 			);
 			path = "OpenGLES04-纹理贴图";
@@ -77,6 +110,71 @@
 				5C49D5E41F56CEC8001E9427 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5C49D5FA1F56CF17001E9427 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D60E1F57AF0A001E9427 /* jpeg */,
+				5C49D5FB1F56CF17001E9427 /* GLUtils.cpp */,
+				5C49D5FC1F56CF17001E9427 /* GLUtils.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5C49D6031F56D153001E9427 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D6041F56D153001E9427 /* Shader.fsh */,
+				5C49D6051F56D153001E9427 /* Shader.vsh */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		5C49D60E1F57AF0A001E9427 /* jpeg */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D60F1F57AF0A001E9427 /* include */,
+				5C49D61A1F57AF0A001E9427 /* JpegUtil.c */,
+				5C49D61B1F57AF0A001E9427 /* JpegUtil.h */,
+				5C49D61C1F57AF0A001E9427 /* prebuilt */,
+			);
+			path = jpeg;
+			sourceTree = "<group>";
+		};
+		5C49D60F1F57AF0A001E9427 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D6151F57AF0A001E9427 /* ios */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5C49D6151F57AF0A001E9427 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D6161F57AF0A001E9427 /* jconfig.h */,
+				5C49D6171F57AF0A001E9427 /* jerror.h */,
+				5C49D6181F57AF0A001E9427 /* jmorecfg.h */,
+				5C49D6191F57AF0A001E9427 /* jpeglib.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		5C49D61C1F57AF0A001E9427 /* prebuilt */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D6271F57AF0A001E9427 /* ios */,
+			);
+			path = prebuilt;
+			sourceTree = "<group>";
+		};
+		5C49D6271F57AF0A001E9427 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				5C49D6281F57AF0A001E9427 /* libjpeg.a */,
+			);
+			path = ios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +236,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C49D60D1F56D30D001E9427 /* wood.jpg in Resources */,
+				5C49D60C1F56D30D001E9427 /* pic.jpg in Resources */,
+				5C49D6061F56D153001E9427 /* Shader.fsh in Resources */,
 				5C49D5F31F56CEC8001E9427 /* LaunchScreen.storyboard in Resources */,
+				5C49D60B1F56D30D001E9427 /* flower.jpg in Resources */,
 				5C49D5F01F56CEC8001E9427 /* Assets.xcassets in Resources */,
 				5C49D5EE1F56CEC8001E9427 /* Main.storyboard in Resources */,
+				5C49D6071F56D153001E9427 /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C49D5FD1F56CF17001E9427 /* GLUtils.cpp in Sources */,
+				5C49D6291F57AF0A001E9427 /* JpegUtil.c in Sources */,
 				5C49D5EB1F56CEC8001E9427 /* ViewController.m in Sources */,
 				5C49D5E81F56CEC8001E9427 /* AppDelegate.m in Sources */,
 				5C49D5E51F56CEC8001E9427 /* main.m in Sources */,
+				5C49D6021F56D0B5001E9427 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +382,10 @@
 				DEVELOPMENT_TEAM = D8RJFY6RH2;
 				INFOPLIST_FILE = "OpenGLES04-纹理贴图/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenGLES04-纹理贴图/Utils/jpeg/prebuilt/ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.waqu.OpenGLES04-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -288,6 +398,10 @@
 				DEVELOPMENT_TEAM = D8RJFY6RH2;
 				INFOPLIST_FILE = "OpenGLES04-纹理贴图/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenGLES04-纹理贴图/Utils/jpeg/prebuilt/ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.waqu.OpenGLES04-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
