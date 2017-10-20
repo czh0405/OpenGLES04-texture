@@ -8,6 +8,7 @@
 
 #import "OpenGLView.h"
 #import "GLUtils.h"
+#import "JpegUtil.h"
 
 // 使用匿名 category 来声明私有成员
 @interface OpenGLView()
