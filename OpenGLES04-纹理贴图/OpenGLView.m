@@ -205,11 +205,21 @@
         0.0f, 1.0f,  // 左下
     };
     
+     static GLfloat verColors[] = {
+        1.0f, 0.0f, 0.0f,
+        0.0f, 1.0f, 0.0f,
+        0.0f, 0.0f, 1.0f,
+        1.0f, 1.0f, 0.0f
+    };
+    
     glEnableVertexAttribArray(glGetAttribLocation(_program, "position"));
     glVertexAttribPointer(glGetAttribLocation(_program, "position"), 3, GL_FLOAT, GL_FALSE, 0, vertices);
     
     glEnableVertexAttribArray(glGetAttribLocation(_program, "texcoord"));
     glVertexAttribPointer(glGetAttribLocation(_program, "texcoord"), 2, GL_FLOAT, GL_FALSE, 0, vertices1);
+    
+    glEnableVertexAttribArray(glGetAttribLocation(_program, "color"));
+    glVertexAttribPointer(glGetAttribLocation(_program, "color"), 3, GL_FLOAT, GL_FALSE, 0, verColors);
 }
 
 - (void)setupTexure
