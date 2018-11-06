@@ -22,6 +22,7 @@
 		5C49D60D1F56D30D001E9427 /* wood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5C49D60A1F56D30D001E9427 /* wood.jpg */; };
 		5C49D6291F57AF0A001E9427 /* JpegUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C49D61A1F57AF0A001E9427 /* JpegUtil.c */; };
 		5C49D62F1F57AF0A001E9427 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C49D6281F57AF0A001E9427 /* libjpeg.a */; };
+		E9A9624A20AD6F0300907F5D /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9A9624920AD6F0300907F5D /* 7.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5C49D61A1F57AF0A001E9427 /* JpegUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JpegUtil.c; sourceTree = "<group>"; };
 		5C49D61B1F57AF0A001E9427 /* JpegUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpegUtil.h; sourceTree = "<group>"; };
 		5C49D6281F57AF0A001E9427 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
+		E9A9624920AD6F0300907F5D /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				5C49D5EC1F56CEC8001E9427 /* Main.storyboard */,
 				5C49D5EF1F56CEC8001E9427 /* Assets.xcassets */,
 				5C49D5F11F56CEC8001E9427 /* LaunchScreen.storyboard */,
+				E9A9624920AD6F0300907F5D /* 7.jpg */,
 				5C49D5F41F56CEC8001E9427 /* Info.plist */,
 				5C49D6081F56D30D001E9427 /* flower.jpg */,
 				5C49D6091F56D30D001E9427 /* pic.jpg */,
@@ -242,6 +245,7 @@
 				5C49D5F31F56CEC8001E9427 /* LaunchScreen.storyboard in Resources */,
 				5C49D60B1F56D30D001E9427 /* flower.jpg in Resources */,
 				5C49D5F01F56CEC8001E9427 /* Assets.xcassets in Resources */,
+				E9A9624A20AD6F0300907F5D /* 7.jpg in Resources */,
 				5C49D5EE1F56CEC8001E9427 /* Main.storyboard in Resources */,
 				5C49D6071F56D153001E9427 /* Shader.vsh in Resources */,
 			);

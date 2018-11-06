@@ -97,7 +97,11 @@
     glBindTexture(GL_TEXTURE_2D, _texture);
     glUniform1i(glGetUniformLocation(_program, "image"), 0);
     
-    glDrawArrays(GL_TRIANGLES, 0, _vertCount);
+    // Method one and two
+//    glDrawArrays(GL_TRIANGLES, 0, _vertCount);
+    
+    // Method three
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertCount);
 
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
@@ -136,10 +140,8 @@
 
 - (void)setupVBO
 {
-    _vertCount = 6;
-
-    
     // method one
+//    _vertCount = 6;
 //    GLfloat vertices[] = {
 //        0.5f,  0.5f, 0.0f, 1.0f, 0.0f,   // 右上
 //        0.5f, -0.5f, 0.0f, 1.0f, 1.0f,   // 右下
@@ -162,22 +164,45 @@
     
     
     //Method two
+    // 顶点坐标按顺序 需要六个顶点坐标  glDrawArrays(GL_TRIANGLES, 0, _vertCount);
+//    _vertCount = 6;
+//    static GLfloat vertices[] = {
+//        0.5f,  0.5f, 0.0f,   // 右上
+//        0.5f, -0.5f, 0.0f,   // 右下
+//        -0.5f, -0.5f, 0.0f,  // 左下
+//        -0.5f, -0.5f, 0.0f,  // 左下
+//        -0.5f,  0.5f, 0.0f,  // 左上
+//        0.5f,  0.5f, 0.0f,   // 右上
+//    };
+//
+//    static GLfloat vertices1[] = {
+//        1.0f, 0.0f,   // 右上
+//        1.0f, 1.0f,   // 右下
+//        0.0f, 1.0f,  // 左下
+//        0.0f, 1.0f,  // 左下
+//        0.0f, 0.0f,  // 左上
+//        1.0f, 0.0f,   // 右上
+//    };
+
+
+    
+
+    // Method  three
+    // 顶点坐标不是按顺序，按Z字形，可以是四个顶点坐标  glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertCount);
+    _vertCount = 4;
     static GLfloat vertices[] = {
         0.5f,  0.5f, 0.0f,   // 右上
         0.5f, -0.5f, 0.0f,   // 右下
-        -0.5f, -0.5f, 0.0f,  // 左下
-        -0.5f, -0.5f, 0.0f,  // 左下
         -0.5f,  0.5f, 0.0f,  // 左上
-        0.5f,  0.5f, 0.0f,   // 右上
+        -0.5f, -0.5f, 0.0f,  // 左下
     };
-    
+
+    // 图片的文理的坐标是左上角（0，0），右下角（1，1）
     static GLfloat vertices1[] = {
         1.0f, 0.0f,   // 右上
         1.0f, 1.0f,   // 右下
-        0.0f, 1.0f,  // 左下
-        0.0f, 1.0f,  // 左下
         0.0f, 0.0f,  // 左上
-        1.0f, 0.0f,   // 右上
+        0.0f, 1.0f,  // 左下
     };
     
     glEnableVertexAttribArray(glGetAttribLocation(_program, "position"));
