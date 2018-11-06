@@ -20,6 +20,7 @@
     GLuint          _program;
     GLuint          _vbo;
     GLuint          _texture;
+    GLuint          _textureImg2;
     int             _vertCount;
 }
 @end

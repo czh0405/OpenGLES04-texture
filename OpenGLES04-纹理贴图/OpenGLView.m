@@ -97,6 +97,10 @@
     glBindTexture(GL_TEXTURE_2D, _texture);
     glUniform1i(glGetUniformLocation(_program, "image"), 0);
     
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, _textureImg2);
+    glUniform1i(glGetUniformLocation(_program, "image2"), 1);
+    
     // Method one and two
 //    glDrawArrays(GL_TRIANGLES, 0, _vertCount);
     
@@ -191,10 +195,10 @@
     // 顶点坐标不是按顺序，按Z字形，可以是四个顶点坐标  glDrawArrays(GL_TRIANGLE_STRIP, 0, _vertCount);
     _vertCount = 4;
     static GLfloat vertices[] = {
-        0.5f,  0.5f, 0.0f,   // 右上
-        0.5f, -0.5f, 0.0f,   // 右下
-        -0.5f,  0.5f, 0.0f,  // 左上
-        -0.5f, -0.5f, 0.0f,  // 左下
+        1.0f,  1.0f, 0.0f,   // 右上
+        1.0f, -1.0f, 0.0f,   // 右下
+        -1.0f,  1.0f, 0.0f,  // 左上
+        -1.0f, -1.0f, 0.0f,  // 左下
     };
 
     // 图片的文理的坐标是左上角（0，0），右下角（1，1）
@@ -233,6 +237,23 @@
         free(data);
         data = NULL;
     }
+    
+    // image2
+    path = [[NSBundle mainBundle] pathForResource:@"flower" ofType:@"jpg"];
+    
+    // 加载纹理
+    if (read_jpeg_file(path.UTF8String, &data, &size, &width, &height) < 0) {
+        printf("%s\n", "decode fail");
+    }
+    
+    // 创建纹理
+    _textureImg2 = createTexture2D(GL_RGB, width, height, data);
+    
+    if (data) {
+        free(data);
+        data = NULL;
+    }
+    
 }
 
 @end
