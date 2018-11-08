@@ -10,6 +10,10 @@
 #import "GLUtils.h"
 #import "JpegUtil.h"
 
+#import "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
+
 // 使用匿名 category 来声明私有成员
 @interface OpenGLView()
 
@@ -214,6 +218,16 @@
     
     glEnableVertexAttribArray(glGetAttribLocation(_program, "texcoord"));
     glVertexAttribPointer(glGetAttribLocation(_program, "texcoord"), 2, GL_FLOAT, GL_FALSE, 0, vertices1);
+    
+    // 译注：下面就是矩阵初始化的一个例子，如果使用的是0.9.9及以上版本
+    // 下面这行代码就需要改为:
+    // glm::mat4 trans = glm::mat4(1.0f)
+    glm::mat4 trans;
+    trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
+    trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));
+    
+    int transforLoc = glGetUniformLocation(_program, "transform");
+    glUniformMatrix4fv(transforLoc, 1, GL_FALSE, glm::value_ptr(trans));
 }
 
 - (void)setupTexure
